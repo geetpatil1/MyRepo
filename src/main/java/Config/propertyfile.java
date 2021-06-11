@@ -11,13 +11,13 @@ public class propertyfile
 {
 	static Properties prop = new Properties();
 	static String 	projectpath=System.getProperty("user.dir");
-	
+
 	public static void main(String args[])
 	{
 		setproperties();
 		getproperties();
 	}
-	
+
 	public static void getproperties()
 	{
 		try
@@ -25,13 +25,14 @@ public class propertyfile
 			InputStream input=new FileInputStream("C:\\Users\\Administrator\\eclipse-workspace\\Test\\src\\main\\java\\Config\\config.properties");
 			prop.load(input);			
 			mytest.browsername=prop.getProperty("browser");
+			mytest.URL=prop.getProperty("URL");
 		}
 		catch (Exception e)
 		{
-			
+
 		}
 	}
-	
+
 	public static void setproperties()
 	{
 		try
@@ -39,13 +40,13 @@ public class propertyfile
 			OutputStream output=new FileOutputStream("C:\\Users\\Administrator\\eclipse-workspace\\Test\\src\\main\\java\\Config\\config.properties");
 			prop.setProperty("browser", "chrome");
 			prop.store(output,"");
-					
+
 		}
 		catch (Exception e)
 		{
-			
+
 		}
 	}
-	
-	
+
+
 }

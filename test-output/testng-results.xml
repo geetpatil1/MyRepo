@@ -2,30 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-10T20:51:14 IST" name="Default suite" finished-at="2021-06-10T20:51:17 IST" duration-ms="3130">
+  <suite started-at="2021-06-11T12:45:43 IST" name="Default suite" finished-at="2021-06-11T12:45:48 IST" duration-ms="4655">
     <groups>
     </groups>
-    <test started-at="2021-06-10T20:51:14 IST" name="Default test" finished-at="2021-06-10T20:51:17 IST" duration-ms="3130">
+    <test started-at="2021-06-11T12:45:43 IST" name="Default test" finished-at="2021-06-11T12:45:48 IST" duration-ms="4655">
       <class name="test.mytest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.mytest@35aea049]" started-at="2021-06-10T20:51:14 IST" name="setup" finished-at="2021-06-10T20:51:17 IST" duration-ms="3027" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.mytest@6c5945a7]" started-at="2021-06-11T12:45:43 IST" name="setup" finished-at="2021-06-11T12:45:46 IST" duration-ms="2895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="search(java.lang.String,java.lang.String)[pri:0, instance:test.mytest@35aea049]" started-at="2021-06-10T20:51:17 IST" name="search" finished-at="2021-06-10T20:51:17 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="search(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.mytest@6c5945a7]" started-at="2021-06-11T12:45:46 IST" name="search" data-provider="testdata" finished-at="2021-06-11T12:45:47 IST" duration-ms="1055" status="FAIL">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
             <message>
               <![CDATA[
-Method public void test.mytest.search(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : testdata]]>
+[public void test.mytest.search(java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: search([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) Paris,(java.lang.String) Rome]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void test.mytest.search(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : testdata
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:561)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:772)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void test.mytest.search(java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: search([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) Paris,(java.lang.String) Rome]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -47,10 +51,14 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.mytest@6c5945a7]" started-at="2021-06-11T12:45:47 IST" name="teardown" finished-at="2021-06-11T12:45:48 IST" duration-ms="633" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- test.mytest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

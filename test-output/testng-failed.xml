@@ -6,6 +6,7 @@
       <class name="test.mytest">
         <methods>
           <include name="search"/>
+          <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- test.mytest -->
