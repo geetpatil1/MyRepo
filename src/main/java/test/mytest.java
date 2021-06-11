@@ -36,8 +36,10 @@ public class mytest
 		propertyfile.getproperties();
 		System.out.print(browsername);
 		if(browsername.equalsIgnoreCase("chrome"))
-		{		
-			System.setProperty("webdriver.ie.driver", "C:\\Users\\Administrator\\Downloads\\IEDriverServer.exe"); 
+		{	
+			String path = System.getProperty("user.dir");
+			System.out.print(path);
+			System.setProperty("webdriver.ie.driver", path+"\\Driver\\IEDriverServer.exe"); 
 			driver=new InternetExplorerDriver();
 		}
 
@@ -46,7 +48,8 @@ public class mytest
 	@DataProvider(name="testdata")
 	public static Object[][] getdata() throws IOException
 	{
-		String excelpath="C:\\Users\\Administrator\\eclipse-workspace\\Test\\src\\main\\java\\Utilities\\Testdata.xlsx";
+		String excelfilepath = System.getProperty("user.dir");
+		String excelpath=excelfilepath+"\\src\\main\\java\\Utilities\\Testdata.xlsx";
 		Object data[][]= ExcelDataProvider.testdata(excelpath,"Sheet1");
 		return data;
 
